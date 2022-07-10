@@ -199,17 +199,7 @@ dist
 *mies
 
 # Other names that would make sense
-*tests
-*testsdir
-*testsfile
-*testsfiles
-*testdir
-*testfile
-*testfiles
-*testing
-*testingdir
-*testingfile
-*testingfiles
+
 *temp
 *tempdir
 *tempfile
