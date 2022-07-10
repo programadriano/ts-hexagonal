@@ -1,0 +1,4 @@
+# Arquitetura Hexagonal básica
+
+## Estrutura
+Para parte de infra foi criado um arquivo Docker Compose com:
