@@ -41,6 +41,10 @@ class StartUp {
       res.send({ versao: "0.0.2" });
     });
 
+    this.app.route("/users").get((req, res) => {
+      res.send({ users: this.userService.get() });
+    });
+
     this.app.post('/users', (req, res) => {
       let vm = req.body;
       this.userService.save(new User(vm.name));

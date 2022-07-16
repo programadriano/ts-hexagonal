@@ -1,5 +1,6 @@
 import { User } from "../entities/user";
 
 export interface IUserRepository {
-    save(user: User);
+    get(): Array<User>;
+    save(user: User): string;
 }

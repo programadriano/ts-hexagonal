@@ -6,7 +6,7 @@
   "scripts": {
     "compile": "tsc -w",
     "start": "nodemon ./dist/src/api/program.js",
-    "test": "jest",
+    "test": "jest --watch",
     "test:runInBand": "jest -i",
     "clearCache": "jest --clearCache"
   },
@@ -56,6 +56,7 @@
     "install": "^0.13.0",
     "npm": "^8.13.2",
     "reflect-metadata": "^0.1.13",
+    "ts-mockito": "^2.6.1",
     "tsyringe": "^4.7.0"
   }
 }

@@ -6,9 +6,12 @@ import { IUserRepository } from "../ports/IUserRepository";
 export class UserService {
 
     constructor(@inject("IUserRepository") private _userRepository: IUserRepository) { }
+    get(): Array<User> {
+        return this._userRepository.get();
+    }
 
-    save(user: User) {
-        this._userRepository.save(user);
+    save(user: User): String {
+        return this._userRepository.save(user);
     }
 
 }

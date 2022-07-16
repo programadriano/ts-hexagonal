@@ -3,8 +3,15 @@ import { IUserRepository } from "../../domain/ports/IUserRepository";
 
 export class UserRepository implements IUserRepository {
 
-    save(user: User) {
-        console.log(`Usuario: ${user.getName()}`)
+    private _user = new Array<User>();
+
+    get(): Array<User> {
+        return this._user;
+    }
+
+    save(user: User): string {
+        this._user.push(user);
+        return `Usuario: ${user.getName()}`;
     }
 
 }
