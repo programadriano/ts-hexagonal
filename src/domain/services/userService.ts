@@ -6,12 +6,12 @@ import { IUserRepository } from "../ports/IUserRepository";
 export class UserService {
 
     constructor(@inject("IUserRepository") private _userRepository: IUserRepository) { }
-    get(): Array<User> {
-        return this._userRepository.get();
+    async get(): Promise<Array<any>> {
+        return await this._userRepository.get();
     }
 
-    save(user: User): String {
-        return this._userRepository.save(user);
+    async save(user: User): Promise<String> {
+        return await this._userRepository.save(user);
     }
 
 }

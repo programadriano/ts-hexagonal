@@ -13,5 +13,6 @@ export class User {
         return this.Name.value;
     }
 
+    private Id: Number;
     private Name: Name;
 }

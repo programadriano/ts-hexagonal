@@ -5,7 +5,7 @@ import * as cors from "cors";
 import * as compression from "compression";
 
 import { container } from 'tsyringe';
-import '../adapters/infra/ioc/container';
+import '../../driven/infra/ioc/container';
 import { UserService } from "../../../domain/services/userService";
 import { User } from "../../../domain/entities/user";
 
@@ -42,13 +42,13 @@ class StartUp {
       res.send({ versao: "0.0.2" });
     });
 
-    this.app.route("/users").get((req, res) => {
-      res.send({ users: this.userService.get() });
+    this.app.route("/users").get(async (req, res) => {
+      res.send({ users: await this.userService.get() });
     });
 
-    this.app.post('/users', (req, res) => {
+    this.app.post('/users', async (req, res) => {
       let vm = req.body;
-      this.userService.save(new User(vm.name));
+      await this.userService.save(new User(vm.name));
       res.status(200).json({ msg: "usuário salvo com sucesso." });
     });
 
