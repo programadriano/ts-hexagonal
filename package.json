@@ -38,7 +38,6 @@
     "@types/http-status": "^1.1.2",
     "@types/jest": "^27.5.2",
     "jest": "^27.5.1",
-    "jest-ts-auto-mock": "^2.1.0",
     "moq.ts": "^9.0.2",
     "nodemon": "^2.0.19",
     "ts-auto-mock": "^3.6.2",

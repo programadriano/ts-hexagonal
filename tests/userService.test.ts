@@ -1,12 +1,11 @@
 import "reflect-metadata";
 import { describe, beforeEach, test, expect, jest, it } from '@jest/globals'
 import { User } from '../src/domain/entities/user';
-import { IUserRepository } from '../src/domain/ports/IUserRepository';
 import { UserService } from '../src/domain/services/userService';
 
 
 import { container } from 'tsyringe';
-import { UserRepository } from "../src/adapters/repository/userRepository";
+import { UserRepository } from "../src/adapters/driven/repository/userRepository";
 
 container.register(
     "IUserRepository", {

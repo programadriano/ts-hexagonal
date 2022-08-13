@@ -6,8 +6,9 @@ import * as compression from "compression";
 
 import { container } from 'tsyringe';
 import '../adapters/infra/ioc/container';
-import { UserService } from "../domain/services/userService";
-import { User } from "../domain/entities/user";
+import { UserService } from "../../../domain/services/userService";
+import { User } from "../../../domain/entities/user";
+
 
 class StartUp {
   public app: express.Application;
