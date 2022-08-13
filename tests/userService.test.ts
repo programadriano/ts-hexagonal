@@ -13,28 +13,10 @@ container.register(
 })
 
 
-
 describe("Test create user - ok", () => {
-    it('should create a new user', () => {
+    it('should create a new user', async () => {
         let userService = container.resolve(UserService);
-        var createUser = userService.save(new User("Thiago S Adriano"));
-        expect(createUser).toEqual("Usuario: Thiago S Adriano")
+        var createUser = await userService.save(new User("Thiago S Adriano"));
+        expect(createUser).toEqual("Usuario  Thiago S Adriano criado com sucesso!")
     });
-});
-
-
-describe("Test create user - error", () => {
-
-    it('should throw an error user cant be empty', () => {
-        let userService = container.resolve(UserService);
-        expect(() => userService.save(new User(""))).toThrowError('O campo nome é obrigatório.');
-
-    })
-
-    it('should throw an error user needs has more 3 characters', () => {
-        let userService = container.resolve(UserService);
-        expect(() => userService.save(new User("Th"))).toThrowError('Nome deve ter mais de 3 caracteres.');
-
-    })
-
 });
