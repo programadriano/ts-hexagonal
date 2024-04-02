@@ -1,13 +1,17 @@
-# Arquitetura Hexagonal
+# Hexagonal Architecture
 
-## Projeto
-Projeto desenvolvido para demonstrar como criar uma arquitetura clean com os principios da arquitetura hexagonal, apresentadas pelo Alistair Cockburn.
+## Project
+This project was developed to demonstrate how to create a clean architecture using the principles of hexagonal architecture, as presented by Alistair Cockburn.
+
 
 ## Desenvolvimento
-Para rodar o projeto primeiro precisa importar os pacotes utilizando o comando `npm i`. Com os pacotes importados basta executar o comando `npm run compile` para fazer o transpile do projeto e o comando `npm start` para rodar a *API*.
 
-O projeto tem três endpoints, um POST para criação de um novo usuário um get para retornar a lista dos usuários criados e uma rota de healthcheck para validação.
+To run the project, first, you need to import the packages using the command npm i. With the packages imported, just execute the command npm run compile to transpile the project and the command npm start to run the API.
 
-## Teste
+The project has three endpoints, one POST for creating a new user, a GET to return the list of created users, and a health check route for validation.
 
-O projeto esta configurado com testes unitários, para rodar eles basta abrir o terminal e executar o comando `npm test`.
+
+
+## Test
+
+The project is configured with unit tests. To run them, just open the terminal and execute the command npm test.
